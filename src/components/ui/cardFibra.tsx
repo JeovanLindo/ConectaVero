@@ -31,8 +31,8 @@ export function LinkDuplo({ teste1 }: { teste1: typeof teste[0] }){
 
     let url : string
     
-    if (teste1.haveBonus === true){
-      url =`https://wa.me/5521991041111?text=Ol%C3%A1,%20quero%20ser%20um%20cliente%20da%20Conecta%20Vero%20e%20me%20interessei%20pela%20${teste1.plano}%20de%20${teste1.megas}%20${teste1.bytes}!`;
+    if (teste1.megas === ''){
+      url =`https://wa.me/5521991041111?text=Ol%C3%A1,%20quero%20ser%20um%20cliente%20da%20Conecta%20Vero%20e%20me%20interessei%20pela%20${teste1.plano}!`;
     } else {
       url =`https://wa.me/5521991041111?text=Ol%C3%A1,%20quero%20ser%20um%20cliente%20da%20Conecta%20Vero%20e%20me%20interessei%20pela%20${teste1.plano}%20de%20${teste1.megas}%20${teste1.bytes}!`;
     }
