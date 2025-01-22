@@ -1,69 +1,119 @@
 const PricesFibra= [ 
   {
-   Plano: 'De 119,99',
+   HaveBonus: true,  
+   Plano: 'Banda larga empresarial',
+   Megas: '750',
+   Bytes: 'megas',
+   Preco:'SOB CONSULTA',
+   Beneficios:{
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada'      
+   } 
+ },
+  {  
+   HaveBonus: false,  
+   Plano: 'Banda larga empresarial',
+   Megas: '550',
+   Bytes: 'megas',
+   Preco:'117/mês',
+   Beneficios:{
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada'      
+   } 
+ },
+  {
+  HaveBonus: true,  
+   Plano: 'Banda larga empresarial',
+   Megas: '1',
+   Bytes: 'giga',
+   Preco:'SOB CONSULTA',
+   Beneficios:{
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada'      
+   } 
+ },
+  {
+  HaveBonus: false,  
+   Plano: 'Combo banda larga empresarial',
+   Megas: '550',
+   Bytes: 'megas',
+   Preco:'177/mês',
+   Beneficios:{
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada',      
+    beneficio4:'2 linhas móveis'      
+   } 
+ },
+ {
+  HaveBonus: false,  
+   Plano: 'Combo banda larga empresarial',
+   Megas: '1',
+   Bytes: 'giga',
+   Preco:'217/mês',
+   Beneficios:{
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada',      
+    beneficio4:'2 linhas móveis'      
+   } 
+ },
+ {
+  HaveBonus: true,  
+   Plano: 'Banda larga ultra',
    Megas: '800',
    Bytes: 'megas',
-   Preco:'99,99',
+   Preco:'SOB CONSULTA',
    Beneficios:{
-    beneficio1:'Wi-fi 6 incluso',      
-    beneficio2:'Até 700 Mbps de Download',      
-    beneficio3:'Até 350 Mbps de Upload',      
-    beneficio4:'Taxa de instalação Grátis',      
-    beneficio5:'Internet 100% Fibra Óptica'      
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada',      
+    beneficio4:'2 mesh'      
    } 
  },
-  {
-   Plano: 'De 109,99',
-   Megas: '600',
+ {
+  HaveBonus: true,  
+   Plano: 'Combo banda larga ultra',
+   Megas: '800',
    Bytes: 'megas',
-   Preco:'99,99',
+   Preco:'SOB CONSULTA',
    Beneficios:{
-    beneficio1:'Wi-fi 6 incluso',      
-    beneficio2:'Até 700 Mbps de Download',      
-    beneficio3:'Até 350 Mbps de Upload',      
-    beneficio4:'Taxa de instalação Grátis',      
-    beneficio5:'Internet 100% Fibra Óptica'      
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada',      
+    beneficio4:'2 mesh',      
+    beneficio5:'2 linhas móveis'      
    } 
  },
-  {
-   Plano: 'De 99,99',
-   Megas: '450',
-   Bytes: 'megas',
-   Preco:'89,99',
-   Beneficios:{
-    beneficio1:'Wi-fi 6 incluso',      
-    beneficio2:'Até 450 Mbps de Download',      
-    beneficio3:'Até 460 Mbps de Upload',      
-    beneficio4:'Taxa de instalação Grátis',      
-    beneficio5:'Internet 100% Fibra Óptica'      
-   } 
- }, 
-  {
-   Plano: '',
-   Megas: '300',
-   Bytes: 'megas',
-   Preco:'89,99',
-   Beneficios:{
-    beneficio1:'Wi-fi 6 incluso',      
-    beneficio2:'Até 450 Mbps de Download',      
-    beneficio3:'Até 460 Mbps de Upload',      
-    beneficio4:'Taxa de instalação Grátis',      
-    beneficio5:'Internet 100% Fibra Óptica'      
-   } 
- }, 
-  {
-   Plano: '',
-   Megas: 'GIGA',
+ {
+  HaveBonus: true,  
+   Plano: 'Banda larga plano mix',
+   Megas: '',
    Bytes: '',
-   Preco:'149,99',
+   Preco:'SOB CONSULTA',
    Beneficios:{
-    beneficio1:'Wi-fi 6 incluso',      
-    beneficio2:'Até 920 Mbps de Download',      
-    beneficio3:'Até 460 Mbps de Upload',      
-    beneficio4:'Taxa de instalação Grátis',      
-    beneficio5:'Internet 100% Fibra Óptica'      
-   }
- }, 
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada'      
+   } 
+ },
+ {
+  HaveBonus: true,  
+   Plano: 'Banda larga plano mix',
+   Megas: '',
+   Bytes: '',
+   Preco:'SOB CONSULTA',
+   Beneficios:{
+    beneficio1:'Wi-fi 6',      
+    beneficio2:'Upload de 50%',      
+    beneficio3:'1 linha fixa ilimitada',       
+    beneficio4:'2 mesh',       
+    beneficio5:'2 linhas móveis'       
+   } 
+ },
  ]
  
  export default PricesFibra

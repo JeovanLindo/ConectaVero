@@ -19,9 +19,31 @@ const teste = PricesFibra.map((price)=> {
     megas: price.Megas,
     preco: price.Preco,
     bytes: price.Bytes,
-    beneficios: price.Beneficios
+    beneficios: price.Beneficios,
+    haveBonus: price.HaveBonus
   }
 })                     
+
+export function LinkDuplo({ teste1 }: { teste1: typeof teste[0] }){
+  
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    let url : string
+    
+    if (teste1.haveBonus === true){
+      url =`https://wa.me/5521991041111?text=Ol%C3%A1,%20quero%20ser%20um%20cliente%20da%20Conecta%20Vero%20e%20me%20interessei%20pela%20${teste1.plano}%20de%20${teste1.megas}%20${teste1.bytes}!`;
+    } else {
+      url =`https://wa.me/5521991041111?text=Ol%C3%A1,%20quero%20ser%20um%20cliente%20da%20Conecta%20Vero%20e%20me%20interessei%20pela%20${teste1.plano}%20de%20${teste1.megas}%20${teste1.bytes}!`;
+    }
+    window.open(url, '_blank'); 
+  }  
+return (
+  <Button className='w-full'>
+    <a target='_blank' onClick={handleClick}>Clique aqui</a>
+  </Button>
+);
+}
 
 export function CardNavFibra() {
   return (
@@ -62,26 +84,23 @@ export function CardNavFibra() {
         modules={[Pagination]}
       >
         {teste.map((teste1, index)=>(
-          <SwiperSlide className=' h-fit flex flex-row justify-center w-72 mb-10 items-center'
+          <SwiperSlide className=' h-[34rem] flex flex-row justify-center w-72 mb-10 items-center'
           key={index}>
-            <div className='flex flex-col h-fit justify-between items-center border border-gigaAzul gap-8 rounded-md w-full p-5'>
+            <div className='flex flex-col h-full justify-between items-center border border-primaria gap-8 rounded-md w-full p-5'>
               <div className='flex gap-3 w-full items-center justify-center h-fit flex-col'>
-                  <p className='text-4xl font-bold text-gigaAzul flex items-center gap-1'>
+                  <p className='text-2xl font-bold text-secundaria items-center justify-center uppercase text-center w-full flex gap-1 flex-row'>{teste1.plano}</p>
+                  <p className='text-4xl font-bold text-primaria flex items-center gap-1'>
                    {teste1.megas}
                    {teste1.bytes === 'megas' ? ' MEGA' : '' }
+                   {teste1.bytes === 'giga' ? 'GB' : ''}
                   </p>
               </div>
 
-              <div className='flex w-full flex-col'>
-                <p className='text-md text-gigaAzul opacity-80 flex gap-1 flex-row'><p>{teste1.plano}</p> por apenas:</p>
-                <p className='text-3xl text-gigaAzul justify-start w-full font-medium flex flex-row items-end'>R$ {teste1.preco}<p className='font-normal text-base'>/Mês</p></p>
-              </div>
-
               <div className='w-full flex gap-3 flex-col'>
-                <h1 className='font-normal text-gigaAzul' >Benefícios</h1>   
+                <h1 className='font-normal text-primaria' >Benefícios</h1>   
                 <ul >{Object.values(teste1.beneficios).map((beneficio, index) => (
                   <li key={index} className='text-md items-center flex flex-row gap-1
-                   opacity-80 text-gigaAzul'>
+                   opacity-80 text-primaria'>
                    <CircleCheckBig className='w-4'/> {beneficio}
                   </li>
                 ))}
@@ -89,9 +108,16 @@ export function CardNavFibra() {
                 
               </div>
 
-              <Button variant={'outline'} className='w-fit'>
-                <a target='_blank' href={`https://wa.me/5521991041111?text=Ol%C3%A1,%20quero%20ser%20um%20cliente%20da%20Conecta%20Giga%20e%20me%20interessei%20pelo%20plano%20de%20${teste1.megas}%20Mega%20por%20${teste1.preco}%20!`}>Contratar serviço fibra</a>
-              </Button>
+              <div className='flex w-full flex-col'>
+                <p className='text-3xl text-primaria justify-start w-full font-medium flex flex-row items-end'>
+                  {teste1.haveBonus === true ? '' : 'POR R$'}
+                  {teste1.preco}
+                </p>
+              </div>
+
+              
+              <LinkDuplo teste1={teste1}/>
+              
             </div>
               
           </SwiperSlide>
