@@ -1,4 +1,4 @@
-import { MonitorCog, MonitorSmartphone, PhoneCall, ShieldX } from "lucide-react";
+import { Airplay, Building2, Cable, Hotel, MonitorCog, MonitorSmartphone, PhoneCall, ShieldX, TabletSmartphone } from "lucide-react";
 
 export default function Services({ id }: { id: string }){
   return(
@@ -44,6 +44,30 @@ export default function Services({ id }: { id: string }){
             <p className="text-slate-900 flex flex-col">Optar pela locação de softwares com Vero Empresas é simples e direto: Escolha o pacote ideal, configure e use e ajuste sempre que precisar. Tenha custo-efetividade, flexibilidade de licenças, acesso em qualquer lugar, segurança robusta.</p>
           </div>
         </div>
+
+        <div className="flex flex-row items-center  justify-center gap-3 flex-wrap w-full">
+          <div className="flex justify-center items-center flex-col bg-primaria text-white h-32 p-4 rounded-md gap-1 w-48 text-center">
+            <Hotel/>
+            <p>Banda Larga Empresarial</p>
+          </div>
+          <div className="flex justify-center items-center flex-col bg-primaria text-white h-32 p-4 rounded-md gap-1 w-48 text-center">
+            <Building2/>
+            <p>Banda Larga Corporativo</p>
+          </div>
+          <div className="flex justify-center items-center flex-col bg-primaria text-white h-32 p-4 rounded-md gap-1 w-48 text-center">
+            <Cable/>
+            <p>Link Dedicado</p>
+          </div>
+          <div className="flex justify-center items-center flex-col bg-primaria text-white h-32 p-4 rounded-md gap-1 w-48 text-center">
+            <TabletSmartphone/>
+            <p>Linha móvel</p>
+          </div>
+          <div className="flex justify-center items-center flex-col bg-primaria text-white h-32 p-4 rounded-md gap-1 w-48 text-center">
+            <Airplay/>
+            <p>Assinatura Office 365</p>
+          </div>
+        </div>
+        
       </section>
     </>
   )
